@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Dumbbell, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { PlanProvider, usePlan} from "@/app/components/PlanProvider";
+import { usePlan } from "@/app/components/PlanProvider";
 
 
 const Navbar = () => {
