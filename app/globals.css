@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #070707;
+  color: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: #ccff00;
+  color: #000;
+}
+
+button,
+a,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+option {
+  background: #101010;
+  color: #fff;
+}
+
+@layer utilities {
+  .text-fit-lime {
+    color: #ccff00;
+  }
+  .bg-fit-lime {
+    background-color: #ccff00;
+  }
+  .bg-fit-bg {
+    background-color: #070707;
+  }
+  .bg-fit-panel {
+    background-color: #101010;
+  }
+  .border-fit-lime {
+    border-color: #ccff00;
+  }
+}
