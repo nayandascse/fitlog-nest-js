@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { PlanProvider } from "@/components/PlanProvider";
 import { Toaster } from "react-hot-toast";
-import Navbar from "./components/Navbar";
-import { PlanProvider } from "./components/PlanProvider";
-import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "FitLog — Workout Library",
@@ -14,7 +14,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body>
-
         <PlanProvider>
           <Navbar />
           <main>{children}</main>
