@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowUpRight, Flame, Star, Timer } from "lucide-react";
 import type { Workout } from "@/types/workout";
 
-export default function WorkoutCard({ workout }: { workout: Workout }) {
+const WorkoutCard = ({ workout }: { workout: Workout }) => {
   return (
     <Link
       href={`/workout/${workout.id}`}
@@ -48,3 +48,5 @@ export default function WorkoutCard({ workout }: { workout: Workout }) {
     </Link>
   );
 }
+
+export default WorkoutCard;

@@ -8,7 +8,7 @@ import PlanListCard from "@/components/PlanListCard";
 
 type Tab = "plan" | "saved";
 
-export default function MyPlanPage() {
+const MyPlanPage = () => {
   const { plan, saved } = usePlan();
   const [tab, setTab] = useState<Tab>("plan");
 
@@ -69,3 +69,5 @@ function Metric({ icon, label, value }: { icon: React.ReactNode; label: string; 
     </div>
   );
 }
+
+export default MyPlanPage;

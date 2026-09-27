@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowRight } from "lucide-react";
 
-export default function Hero() {
+const Hero = () => {
   return (
     <section className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-20 pt-14 sm:px-6 lg:grid-cols-[1.05fr_.95fr] lg:px-8 lg:pb-24 lg:pt-20">
       <div>
@@ -38,3 +38,5 @@ export default function Hero() {
     </section>
   );
 }
+
+export default Hero;

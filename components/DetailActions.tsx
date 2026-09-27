@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import type { Workout } from "@/types/workout";
 import { usePlan } from "@/components/PlanProvider";
 
-export default function DetailActions({ workout }: { workout: Workout }) {
+const DetailActions = ({ workout }: { workout: Workout }) => {
   const { addToPlan, saveForLater, isInPlan, isSaved } = usePlan();
 
   return (
@@ -27,3 +27,5 @@ export default function DetailActions({ workout }: { workout: Workout }) {
     </div>
   );
 }
+
+export default  DetailActions;

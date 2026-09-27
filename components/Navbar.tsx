@@ -7,7 +7,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { usePlan } from "@/components/PlanProvider";
 
-export default function Navbar() {
+const Navbar = () => {
   const pathname = usePathname();
   const { plan, saved } = usePlan();
   const [open, setOpen] = useState(false);
@@ -48,7 +48,7 @@ export default function Navbar() {
             <Link onClick={() => setOpen(false)} href="/" className={active("/")}>WORKOUT</Link>
             <Link onClick={() => setOpen(false)} href="/my-plan" className={active("/my-plan")}>MY PLAN</Link>
             <div className="flex gap-2 pt-2">
-              <Link href="/my-plan" className="flex items-center gap-2 rounded-full bg-fit-lime px-3 py-2 text-xs font-black text-black"><Dumbbell size={14}/> PLAN {plan.length}</Link>
+              <Link href="/my-plan" className="flex items-center gap-2 rounded-full bg-fit-lime px-3 py-2 text-xs font-black text-black"><Dumbbell size={14} /> PLAN {plan.length}</Link>
               <Link href="/my-plan" className="rounded-full border border-white/30 px-3 py-2 text-xs font-black">SAVED {saved.length}</Link>
             </div>
           </div>
@@ -57,3 +57,5 @@ export default function Navbar() {
     </header>
   );
 }
+
+export default Navbar;

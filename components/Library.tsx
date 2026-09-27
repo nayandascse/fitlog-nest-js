@@ -9,7 +9,7 @@ import { API_URL } from "@/lib/api";
 
 type SortKey = "duration" | "calories" | "rating";
 
-export default function Library() {
+const Library = () => {
   const [workouts, setWorkouts] = useState<Workout[]>([]);
   const [sortBy, setSortBy] = useState<SortKey>("duration");
   const [loading, setLoading] = useState(true);
@@ -80,3 +80,5 @@ export default function Library() {
     </section>
   );
 }
+
+export default Library;
