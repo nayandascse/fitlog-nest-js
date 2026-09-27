@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowLeft, Dumbbell } from "lucide-react";
 
-export default function NotFound() {
+const NotFound = () => {
   return (
     <section className="mx-auto grid min-h-[70vh] max-w-3xl place-items-center px-4 text-center">
       <div>
@@ -14,3 +14,5 @@ export default function NotFound() {
     </section>
   );
 }
+
+export default NotFound;

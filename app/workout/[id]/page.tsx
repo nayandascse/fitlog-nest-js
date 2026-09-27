@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { getWorkout } from "@/lib/api";
 import DetailActions from "@/components/DetailActions";
 
-export default async function WorkoutDetails({ params }: { params: Promise<{ id: string }> }) {
+const WorkoutDetails = async ({ params, }: { params: Promise<{ id: string }>; }) => {
   const { id } = await params;
   const workout = await getWorkout(id);
 
@@ -13,7 +13,7 @@ export default async function WorkoutDetails({ params }: { params: Promise<{ id:
   return (
     <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
       <Link href="/" className="mb-7 inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-white/45 hover:text-fit-lime">
-        <ArrowLeft size={15}/> Back to library
+        <ArrowLeft size={15} /> Back to library
       </Link>
 
       <div className="grid overflow-hidden rounded-3xl border border-white/10 bg-fit-panel lg:grid-cols-[.95fr_1.05fr]">
@@ -66,12 +66,14 @@ export default async function WorkoutDetails({ params }: { params: Promise<{ id:
           </div>
 
           <div className="mt-6 grid grid-cols-3 gap-2 text-center text-[10px] font-black uppercase tracking-wider text-white/35">
-            <span className="flex items-center justify-center gap-1.5"><Timer size={13}/> {workout.duration} min</span>
-            <span className="flex items-center justify-center gap-1.5"><Flame size={13}/> {workout.caloriesBurned} kcal</span>
-            <span className="flex items-center justify-center gap-1.5"><Star size={13}/> {workout.rating}</span>
+            <span className="flex items-center justify-center gap-1.5"><Timer size={13} /> {workout.duration} min</span>
+            <span className="flex items-center justify-center gap-1.5"><Flame size={13} /> {workout.caloriesBurned} kcal</span>
+            <span className="flex items-center justify-center gap-1.5"><Star size={13} /> {workout.rating}</span>
           </div>
         </div>
       </div>
     </section>
   );
 }
+
+export default WorkoutDetails;
